@@ -254,7 +254,7 @@ class TextSR(base.TextBase):
         ssim_avg = round(ssim_avg.item(), 6)
         current_acc_dict[data_name] = float(acc)
         # result = {'accuracy': current_acc_dict, 'fps': fps}
-        result = {'accuracy': current_acc_dict, 'psnr_avg': psnr_avg, 'ssim_avg': ssim_avg, 'fps': fps}
+        result = {'accuracy': current_acc_dict[data_name], 'psnr_avg': psnr_avg, 'ssim_avg': ssim_avg, 'fps': fps}
         print(result)
 
     def demo(self):
